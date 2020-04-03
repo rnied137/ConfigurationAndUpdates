@@ -1,0 +1,30 @@
+1. sudo nano /etc/systemd/system/YOUR_SERVICE_NAME.service
+2. Create Service containing stuff below
+
+
+[Unit]
+Description - Vnc Supervisor 
+After=syslog.target network-online.target
+
+
+[Service]
+Type=simple
+ExecStart=pathToExec
+TimeoutStartSec=0
+KillMode=process
+
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+3. Reload servies: 
+	sudo systemctl deamon-reload
+4. enable service:
+	sudo systemctl enable service-name
+	
+5. start service: 
+	sudo systemctl start service-name
+6. check status of service
+	systemctl status service-name
