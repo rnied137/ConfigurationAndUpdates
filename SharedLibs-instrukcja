@@ -2,3 +2,9 @@
 ldd ClientQt | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /home/radek/test/vncclient/
 ldd RS232Ver2 | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /home/radek/test/biblioteki\ do\ programow/supervisor/
 
+
+
+2.Building with deploy tool
+./linuxdeployqt-6-x86_64.AppImage /home/radek/projekty/build-ReconnectClientQT-Desktop-Release/ClientQt -unsupported-allow-new-glibc -appimage 
+
+./linuxdeployqt-6-x86_64.AppImage /home/radek/build-RS232Ver2-Desktop-Release/RS232Ver2 -unsupported-allow-new-glibc -appimage
