@@ -1,3 +1,4 @@
 1. Copy all shared dependencies/libs to the binary file.
 ldd ClientQt | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /home/radek/test/vncclient/
-ldd RS232Ver2 | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /home/radek/test/supervisor
+ldd RS232Ver2 | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /home/radek/test/biblioteki\ do\ programow/supervisor/
+
