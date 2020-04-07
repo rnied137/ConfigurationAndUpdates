@@ -4,3 +4,12 @@ dirname=$(dirname "$0")
 cd "$dirname/bin"
 export LD_LIBRARY_PATH=`pwd`
 ./$appname "$@"
+
+
+
+Main folder
+./ClientQt.sh
+bin/ClientQT
+bin/*.so
+platforms/ *.so (from platforms folder)
+
