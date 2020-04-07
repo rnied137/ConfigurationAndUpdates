@@ -28,3 +28,19 @@ WantedBy=multi-user.target
 	sudo systemctl start service-name
 6. check status of service
 	systemctl status service-name
+	
+	
+	
+	
+	
+	cp /path/to/testScript.sh /usr/local/bin/testScript.sh
+chmod 744 /usr/local/bin/testScript.sh
+
+3: Next, install systemd service unit and enable it so it will be executed at the boot time:
+
+chmod 664 /etc/systemd/system/testScript.service
+systemctl daemon-reload
+systemctl enable testScript.service
+Created symlink from /etc/systemd/system/default.target.wants/testScript-sp
+
+Hope this works well , i have tested in my system and working fine.. Still you have on mo option putting it in crond with Add the line @reboot.
