@@ -44,3 +44,6 @@ systemctl enable testScript.service
 Created symlink from /etc/systemd/system/default.target.wants/testScript-sp
 
 Hope this works well , i have tested in my system and working fine.. Still you have on mo option putting it in crond with Add the line @reboot.
+
+
+Service should be located outside $HOME DIRECTORY, so Xorg can work properly.
