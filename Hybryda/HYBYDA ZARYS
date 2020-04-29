@@ -1,4 +1,6 @@
 
+ scp -r usbpatcher rg@192.168.8.109:/opt/aplikacje
+
 
 chmod -R 777 /opt/aplikacje
 /opt/aplikacje
