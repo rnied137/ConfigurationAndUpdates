@@ -1,0 +1,15 @@
+[Unit]
+Description=supervisor
+After=graphical.target network-online.target
+
+[Service]
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/vnc/.Xauthority"
+Type=simple
+ExecStart=/opt/aplikacje/supervisor/RS232Ver2
+User=vnc
+RestartSec=10s
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

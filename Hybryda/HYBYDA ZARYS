@@ -1,0 +1,18 @@
+
+
+chmod -R 777 /opt/aplikacje
+/opt/aplikacje
+/opt/aplikacje/vnc          /ClientQt
+/opt/aplikacje/supervisor   /RS232Ver2
+/opt/aplikacje/usbpatcher    /UsbPatcher
+
+usluga1 - vnc
+usluga2 - supervisor
+usluga3 - patcher
+
+usbpatcher
+
+
+/etc/bash.bashrc
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/aplikacje/

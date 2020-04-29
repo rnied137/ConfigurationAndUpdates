@@ -1,0 +1,14 @@
+[Unit]
+Description=supervisor
+
+[Service]
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/vnc/.Xauthority"
+Type=simple
+ExecStart=/opt/aplikacje/usbpatcher/UsbPatcher
+User=vnc
+RestartSec=10s
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
