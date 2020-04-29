@@ -1,0 +1,28 @@
+/etc/lightdm/lightdm.conf
+--------------------------
+
+[Seat:*]
+pam-service=lightdm
+pam-autologin-service=lightdm-autologin
+autologin-user=rg
+autologin-user-timeout=0
+user-session=LXDE
+---------------------------
+
+
+# groupadd -r autologin
+# gpasswd -a username autologin
+
+-----------------------------------
+/etc/pam.d/lightdm
+
+#%PAM-1.0
+auth        sufficient  pam_succeed_if.so user ingroup nopasswdlogin
+auth        include     system-login
+...
+
+------------------------------------------
+# groupadd -r nopasswdlogin
+# gpasswd -a username nopasswdlogin
+
+
