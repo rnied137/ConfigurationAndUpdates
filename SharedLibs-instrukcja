@@ -8,3 +8,6 @@ ldd RS232Ver2 | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /home/
 ./linuxdeployqt-6-x86_64.AppImage /home/radek/projekty/build-ReconnectClientQT-Desktop-Release/ClientQt -unsupported-allow-new-glibc -appimage 
 
 ./linuxdeployqt-6-x86_64.AppImage /home/radek/build-RS232Ver2-Desktop-Release/RS232Ver2 -unsupported-allow-new-glibc -appimage
+
+
+Patchowanie r-path: patchelf --set-rpath '$ORIGIN' ./Aplikacja
