@@ -11,3 +11,6 @@ ldd RS232Ver2 | grep "=> /" | awk '{print $3}' | xargs -I '{}' cp -v '{}' /home/
 
 
 Patchowanie r-path: patchelf --set-rpath '$ORIGIN' ./Aplikacja
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/' >> ~/.bashrc
