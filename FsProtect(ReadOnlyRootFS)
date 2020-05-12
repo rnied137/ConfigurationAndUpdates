@@ -1,0 +1,25 @@
+It use aufs (by default, but could use another unionfs tool) to permit live session changes but in RAM by default, so everything is forgotten at reboot.
+
+You could install them by running simply:
+
+apt-get install fsprotect
+
+Once done, from online doc:
+
+    After that:
+
+        Edit /boot/grub/menu.lst or /etc/default/grub2 or /etc/lilo.conf and add "fsprotect=1G" to kernel parameters.
+        Modify 1G as needed.
+        Apply changes (i.e. run update-grub)
+        Edit /etc/default/fsprotect if you want to protect filesystems other than /.
+        reboot
+
+    You may also want to password protect the grub bootloader or forbid any changes to it.
+
+From there, if some file is protected against changes, for sample by
+
+chmod ugo-w myfile
+
+if you use for sample vi myfile and try to write on it with command :w!, this will work and your myfile became changed. You may reboot in order to retrieve unmodified myfile.
+
+That's not even possible with my following first solution:
