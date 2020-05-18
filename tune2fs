@@ -1,5 +1,8 @@
 w terminalu:
 sudo tune2fs -c 2 /dev/sda1
 
+
+sudo tune2fs -c 3 -i 3 /dev/sda1
+
 wyswietlanie:
 sudo tune2fs -l /dev/sda1 | grep Last\c
