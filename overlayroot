@@ -1,0 +1,10 @@
+sudo apt-get install overlayroot
+
+/etc/overlayroot.conf
+
+Pass into the file : overlayroot="tmpfs:swap=1,recurse=0"
+
+sudo overlayroot-chroot - to get into lower writable shell. Save changes, exit, reboot. 
+Your system should be ro once again.
+
+
