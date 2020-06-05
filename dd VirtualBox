@@ -1,1 +1,3 @@
 VBoxManage clonemedium --format RAW debian.vdi debian.img  -> dd to dev/xx
+
+sudo dd if=/dev/sdc of=/dev/sda conv=fsync bs=1M status=progress
