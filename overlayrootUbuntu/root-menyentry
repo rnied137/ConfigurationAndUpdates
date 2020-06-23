@@ -1,0 +1,5 @@
+/etc/initramfs-tools/scripts/init-bottom
+
+/boot/grub/grub.cfg
+
+/etc/grub.d/
