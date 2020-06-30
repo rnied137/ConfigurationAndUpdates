@@ -1,0 +1,8 @@
+/home/user/.config/openbox/lxde-rc.xml
+
+<!-- Launch LXTerminal with Ctrl+Alt+t-->
+    <keybind key="C-A-t">
+      <action name="Execute">
+        <command>lxterminal</command>
+      </action>
+    </keybind>
