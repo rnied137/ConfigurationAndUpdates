@@ -1,0 +1,16 @@
+[Unit]
+Description=vnc program
+After=syslog.target
+
+[Service]
+Environment="DISPLAY=:0"
+Environment="XAUTHORITY=/home/rg/.Xauthority"
+User=root
+ExecStart=/opt/aplikacje/hybryda/Hybryda
+RestartSec=10s
+Restart=on-failure
+KillMode=process
+EnvironmentFile=/opt/aplikacje/hybryda/qt.conf
+
+[Install]
+WantedBy=graphical.target
