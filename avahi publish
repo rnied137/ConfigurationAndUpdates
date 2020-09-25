@@ -1,1 +1,5 @@
 avahi-publish  -s  "CustomerInformationService from $(hostname)" _http._tcp 3000 "Customer information just to test."
+
+
+
+avahi-publish-service CustomerInformationService _ibisip_http._tcp 3000 "Opis"
