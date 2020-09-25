@@ -1,0 +1,1 @@
+avahi-publish  -s  "CustomerInformationService from $(hostname)" _http._tcp 3000 "Customer information just to test."
